@@ -586,6 +586,7 @@ class PipelineLike:
             init_image = init_image.to(device=self.device, dtype=latents_dtype)
             if init_image.size()[-2:] == (height // 8, width // 8):
                 init_latents = init_image
+                print("ok")
             else:
                 if vae_batch_size >= batch_size:
                     init_latent_dist = self.vae.encode(init_image.to(self.vae.dtype)).latent_dist
@@ -1126,7 +1127,7 @@ def preprocess_mask(mask):
     mask = np.array(mask).astype(np.float32) / 255.0
     mask = np.tile(mask, (4, 1, 1))
     mask = mask[None].transpose(0, 1, 2, 3)  # what does this step do?
-    mask = 1 - mask  # repaint white, keep black
+    #mask = 1 - mask  # repaint white, keep black
     mask = torch.from_numpy(mask)
     return mask
 

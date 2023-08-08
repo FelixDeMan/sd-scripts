@@ -730,6 +730,8 @@ class PipelineLike:
 
         if output_type == "pil":
             # image = self.numpy_to_pil(image)
+            #print(image.type())
+            print(image)
             image = (image * 255).round().astype("uint8")
             image = [Image.fromarray(im) for im in image]
 
@@ -2015,6 +2017,8 @@ def main(args):
                 clip_prompts=clip_prompts,
                 clip_guide_images=guide_images,
             )
+            print(images[0])
+            images[0].save('latent.png')
             if highres_1st and not args.highres_fix_save_1st:  # return images or latents
                 return images
 

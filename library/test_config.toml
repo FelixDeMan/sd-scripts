@@ -1,0 +1,22 @@
+pretrained_model_name_or_path = "stabilityai/stable-diffusion-xl-base-1.0"
+dataset_config = "newstuff/pics/dataset_config.toml"
+output_dir = "test_output"
+output_name = "test_output"
+save_model_as = "safetensors"
+prior_loss_weight = 1.0
+max_train_steps = 7000
+xformers = true
+mixed_precision = "fp16"
+gradient_checkpointing = true
+save_every_n_steps = 500
+network_module = "networks.lora"
+no_half_vae = true
+network_train_unet_only = true
+
+
+optimizer_type = "adafactor"
+optimizer_args = [ "scale_parameter=False", "relative_step=False", "warmup_init=False" ]
+
+lr_scheduler = "constant_with_warmup"
+learning_rate = 1e-5
+resolution = "1024,1024"

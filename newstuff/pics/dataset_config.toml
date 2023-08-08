@@ -1,0 +1,15 @@
+[general]
+shuffle_caption = true
+caption_extension = '.txt'
+
+
+[[datasets]]
+resolution = 1024
+batch_size = 1
+keep_tokens = 1
+# これは DreamBooth 方式のデータセット
+[[datasets.subsets]]
+        image_dir = "newstuff/pics/white-chair_denoised"
+        class_tokens = "xyrc chair"
+        num_repeats = 10
+

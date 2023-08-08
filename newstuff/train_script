@@ -1,1 +1,0 @@
-python train_network.py --unet_lr=0.0004 --text_encoder_lr=0.00001 --network_module='lora' --network_dim=128 --network_dropout=0.1 --pretrained_model_name_or_path="stabilityai/stable-diffusion-xl-base-1.0" resolution=1024 --caption_extention="a ywsz chair"

@@ -1,10 +1,10 @@
 pretrained_model_name_or_path = "stabilityai/stable-diffusion-xl-base-1.0"
 dataset_config = "newstuff/pics/dataset_config.toml"
-output_dir = "test_output"
-output_name = "test_output"
+output_dir = "train-results/constant-warmup-scheduler"
+output_name = "constant-warmup-scheduler"
 save_model_as = "safetensors"
 prior_loss_weight = 1.0
-max_train_steps = 7000
+max_train_steps = 10000
 xformers = true
 mixed_precision = "fp16"
 gradient_checkpointing = true

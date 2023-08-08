@@ -11,5 +11,5 @@ batch_size = 1
 [[datasets.subsets]]
         image_dir = "newstuff/pics/white-chair_denoised"
         class_tokens = "xyrc chair"
-        num_repeats = 10
+        
 
